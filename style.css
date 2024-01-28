@@ -84,28 +84,33 @@ body {
     cursor: pointer;
     border-radius: 20px;
     color: #3A025b;
-    animation: outwards 0.2s ease-in-out;
-    box-shadow: 10px 10px 10px -1px rgb(5, 5, 5), -10px -10px 10px -1px rgba(30, 30, 30);
+    animation: outShort 0.09s ease-in-out;
+    box-shadow: 4px 4px 4px -1px rgb(5, 5, 5), -4px -4px 4px -1px rgba(30, 30, 30);
     padding-left: 35px;
     padding-right: 20px;
     font-size: inherit;
     padding-top: 10px;
     padding-bottom: 10px;
-    transition: 0.2s;
+    transition: 0.1s;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
     margin-top: 100px;
 }
 
+.pbr:focus, .pbr:hover {
+    animation: blendIn 0.09s ease-in-out;
+    box-shadow: none;
+}
+
 .pbr:active {
-    font-size: 45px;
+    font-size: 48px;
     padding-top: 15px;
     padding-bottom: 5px;
     padding-left: 39px;
     padding-right: 24px;
-    animation: inwards 0.1s ease-in-out;
-    box-shadow: inset 10px 10px 10px -1px rgb(5, 5, 5), inset -10px -10px 10px -1px rgba(30, 30, 30);
+    animation: inShort 0.09s ease-in-out;
+    box-shadow: inset 4px 4px 4px -1px rgb(5, 5, 5), inset -4px -4px 4px -1px rgba(30, 30, 30);
 }
 
 .allLinks {
@@ -132,10 +137,14 @@ body {
     animation: outwards 0.2s ease-in-out;
     box-shadow: 10px 10px 10px -1px rgba(5, 5, 5), -10px -10px 10px -1px rgb(30, 30, 30);
     margin-top: 2.9%;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
-.link:active {
+.link:hover {
+    background-color: rgba(27, 27, 27);
+}
+
+.link:active, .link:focus {
     animation: inwards 0.2s ease-in-out;
     box-shadow: inset 10px 10px 10px -1px rgb(5, 5, 5), inset -10px -10px 10px -1px rgba(30, 30, 30);
 }
@@ -255,5 +264,67 @@ body {
     }
     100% {
         box-shadow: 10px 10px 10px -1px rgb(5, 5, 5), -10px -10px 10px -1px rgba(30, 30, 30);
+    }
+}
+
+@keyframes outShort {
+    0% {
+        box-shadow: 0px 0px 0px -1px rgb(5, 5, 5), 0px 0px 0px -1px rgba(30, 30, 30);
+    }
+    25% {
+        box-shadow: 1px 1px 1px -1px rgb(5, 5, 5), -1px -1px 1px -1px rgba(30, 30, 30);
+        
+    }
+    50% {
+        box-shadow: 2px 2px 2px -1px rgb(5, 5, 5), -2px -2px 2px -1px rgba(30, 30, 30);
+        
+    }
+    75% {
+        box-shadow: 3px 3px 3px -1px rgb(5, 5, 5), -3px -3px 3px -1px rgba(30, 30, 30);
+    }
+    100% {
+        box-shadow: 4px 4px 4px -1px rgb(5, 5, 5), -4px -4px 4px -1px rgba(30, 30, 30);
+    }
+}
+
+@keyframes inShort {
+    0% {
+        box-shadow: inset 0px 0px 0px -1px rgb(5, 5, 5), inset 0px 0px 0px -1px rgba(30, 30, 30);
+    }
+    25% {
+        box-shadow: inset 1px 1px 1px -1px rgb(5, 5, 5), inset -1px -1px 1px -1px rgba(30, 30, 30);
+        
+    }
+    50% {
+        box-shadow: inset 2px 2px 2px -1px rgb(5, 5, 5), inset -2px -2px 2px -1px rgba(30, 30, 30);
+        
+    }
+    75% {
+        box-shadow: inset 3px 3px 3px -1px rgb(5, 5, 5), inset -3px -3px 3px -1px rgba(30, 30, 30);
+    }
+    /*100% {
+        box-shadow: inset 4px 4px 4px -1px rgb(5, 5, 5), inset -4px -4px 4px -1px rgba(30, 30, 30);
+    }*/
+}
+
+@keyframes shorter {
+
+}
+
+@keyframes blendIn {
+    0% {
+        box-shadow: 4px 4px 4px -1px rgb(5, 5, 5), -4px -4px 4px -1px rgba(30, 30, 30);
+    }
+    25% {
+        box-shadow: 3px 3px 3px -1px rgb(5, 5, 5), -3px -3px 3px -1px rgba(30, 30, 30);
+    }
+    50% {
+        box-shadow: 2px 2px 2px -1px rgb(5, 5, 5), -2px -2px 2px -1px rgba(30, 30, 30);
+    }
+    75% {
+        box-shadow: 1px 1px 1px -1px rgb(5, 5, 5), -1px -1px 1px -1px rgba(30, 30, 30);
+    }
+    100% {
+        box-shadow: 0px 0px 0px -1px rgb(5, 5, 5), 0px 0px 0px -1px rgba(30, 30, 30 );
     }
 }
